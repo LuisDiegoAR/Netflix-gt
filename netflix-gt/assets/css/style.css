@@ -1,0 +1,230 @@
+@font-face {
+    font-family: Netflix;
+    src: url('../../fonts/AvenirNextLTPro-Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: 'Netflix';
+    padding-bottom: 108px;
+
+}
+
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.header{
+   padding: 15px;
+   position: relative;
+   z-index: 2;
+   background-image: linear-gradient( to bottom, black 0% ,black 80%, transparent 100% );
+   
+}
+
+.item-navegacion{
+    list-style: none;
+    text-align: center;
+}
+
+.navegacion{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-auto-columns: 100px;
+    grid-auto-flow: column;
+    justify-content: space-around;
+}
+
+.featured{
+    margin-top: -90px;
+    position: relative;
+    overflow: hidden;
+    }
+.featured .fondo{
+    width: 100%;
+}
+
+.titulo{
+height: 600px;
+margin-top: -500px;
+text-align: center;
+}
+
+.tags{
+ display: flex;
+justify-content: center;
+gap: 20px;
+list-style: none;
+margin-top: -80px;
+}
+
+.featured-details{
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background-image: linear-gradient(to top, black 0%, black 40%, transparent 100%);
+}
+
+.tag:before {
+    content: '•';
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.tag:first-child::before {
+    display: none;
+}
+
+.actions {
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    padding-bottom: 2cm; 
+
+
+}
+
+.button{
+border: 1px;
+background: white;
+display: flex;
+align-items: center ;
+padding: 2px 1em 2px .5em;
+border: none;
+border-radius: 3px;
+}
+
+.button::before{
+content: '';
+display: inline-block;
+width: 25px;
+height: 25px;
+margin-right: 5px;
+
+}
+
+.button-secundario{
+background: none;    
+color: white;
+text-align: center;
+font-size: 1.1em;
+min-width: 100px;
+cursor: pointer;
+border: none;
+
+}
+.button-secundario::before{
+content: '';
+display: block;
+width: 25px;
+height: 25px;
+margin:auto;
+margin-bottom: 5px;
+}
+
+.icon-plus::before{
+
+    background: url('../../images/icons/plus.svg');
+}
+.icon-play::before{
+    background: url('../../images/icons/play.svg');
+}
+
+.icon-info::before{
+    background: url('../../images/icons/info.svg');
+    
+
+}
+
+.footer{
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+background: black;
+padding: 1em 0 0;
+
+
+}
+
+.list-content{
+ white-space: nowrap;
+ overflow-x: auto;
+ cursor: pointer;
+ border-radius: 16px;
+ 
+}
+
+.list-item{
+display: inline-block;
+margin-left: 10px;
+object-fit: cover;
+transition: transform 0.8s;
+}
+
+.list-item:hover{
+transform: scale(1.1);
+
+}
+
+.list-item:first-child{
+  margin: 0;  
+}
+
+.list{
+
+ padding: 0 1em;
+}
+.tab-list {
+margin: 0;
+padding: 0;
+display: grid;
+grid-auto-flow: column;
+list-style: none;
+color:gray;
+padding-bottom: 1em;
+}
+
+.tab-list a{
+    color: gray;
+}
+
+.tab-item{
+ text-align: center;
+ font-size: .9em;
+
+}
+
+.list-content::-webkit-scrollbar{
+    display: none;
+}
+
+.tab-item svg{
+    display: block;
+    margin: auto;
+}
+
+.tab-item path{
+fill:gray;
+
+}
+
+.tab-item:hover :is(path,span) {
+    fill: white;
+    color: white;
+}
+
+@media (max-width:1280px){
+    .featured .titulo{
+        width: 100%;
+        text-align: center;
+    }
+}
